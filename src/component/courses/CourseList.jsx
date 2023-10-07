@@ -1,9 +1,8 @@
 import React from 'react'
-import useCourseStore from '../../app/dataStore'
-
+import useCourseStore from './../../store/CourseStore'
 
 const CourseList = () => {
-    const {courses, removeCourse, toggleCourseStatus} = useCourseStore(
+    const {courses, removeCourse, toggleCourseStatus} = useCourseStore(    //Here,We will call all function written in this component
         (state) => ({
             courses: state.courses,
             removeCourse: state.removeCourse,
@@ -13,7 +12,7 @@ const CourseList = () => {
   return (
     <>
     <ul>
-        {courses.map((course:any, i) => {
+        {courses.map((course, i) => {
             return (
                 <React.Fragment key={i}>
                     <li

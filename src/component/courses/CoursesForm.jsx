@@ -4,7 +4,7 @@ import useCourseStore from '../../app/dataStore'
 
 const CourseForm = () => {
 
-    const addCourse = useCourseStore((state:any) => state.addCourse)
+    const addCourse = useCourseStore((state) => state.addCourse)
 
     const [courseTitle, setCourseTitle] = useState("")
     console.log("CourseForm Rendererd");
